@@ -1,14 +1,14 @@
-# pthread 练习
+# Thread
 
-九个 C 文件，练的是 POSIX 线程的基本操作：创建线程、传参、线程属性、`join`、`detach`，以及互斥锁、信号量。
+这几个文件专门用来练 `pthread`。
 
-我没有把它们拼成一个大项目。线程的问题往往要靠运行结果和执行顺序去理解，独立的小程序反而比较容易观察。
+从创建线程、传参、属性、`join`、`detach`，一直写到互斥锁和信号量。每个例子单独一个 `.c` 文件，方便编译和比较输出。
 
-在 Linux 上可以先拿第一个例子试试：
+比如第一个：
 
-```bash
-gcc 1_pthread_create.c -o pthread_demo -pthread
-./pthread_demo
+```sh
+gcc 1_pthread_create.c -pthread -o thread-demo
+./thread-demo
 ```
 
-这是给自己留的实验代码。并发行为会受环境影响，不能因为运行几次正常就认为线程安全。
+并发程序跑通一次不代表没问题；这里保留的是当时的实验版本。
